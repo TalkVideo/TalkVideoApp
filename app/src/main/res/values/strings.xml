@@ -1,0 +1,39 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">TalkVideo App</string>
+    <string name="live_indicator">Connected: </string>
+    <string name="start_broadcasting">Start Streaming</string>
+
+
+    <string name="nocamera">No camera exists in your device</string>
+    <string name="camera_not_running_properly">Camera is not running properly</string>
+    <string name="restart">Restart</string>
+    <string name="streaming_not_finished">Previous Stream Is Still Sending Data...</string>
+    <string name="oopps_shouldnt_happen">Unknown Errror. Exit And Restart.</string>
+    <string name="broadcast_connection_lost">Connection to media server is lost</string>
+    <string name="low_bandwidth">Network speed is low. Latency is increasing.</string>
+    <string name="not_eligible_for_broadcast">Your device is not able to stream with this app. There is no hardware encoder.</string>
+    <string name="no_network_connectivity">You\'re not connected to any network. Please connect to Internet</string>
+    <string name="stop_broadcasting">Stop</string>
+    <string name="camera_permission_is_required">Camera permission is required to run this app</string>
+    <string name="microphone_permission_is_required">Microphone permission is required to run this app</string>
+    <string name="permission">Permission</string>
+    <string name="app_doesnot_work_without_permissions">Please give Camera and Record Audio permission on app settings</string>
+
+
+    <string name="stream_not_started">Failed To Start Stream. Check Server URL, Stream Key, and Internet Connection.</string>
+    <string name="live_video_broadcaster">TalkVideo</string>
+
+
+    <string name="stream_name">Stream name/key</string>
+    <string name="stream_url">Server URL</string>
+
+    <!--YouTube-->
+    <string name="stream_url_value">rtmp://a.rtmp.youtube.com/live2</string>
+    <string name="streamId">Your-Stream-Key-Here</string>
+
+    <!--Nginx Or Oher RTMP Server Running On Network Host
+    <string name="stream_url_value">rtmp://[HostName|IP]/[app]</string>
+    <string name="streamId">[name>]</string>
+    -->
+
+</resources>
