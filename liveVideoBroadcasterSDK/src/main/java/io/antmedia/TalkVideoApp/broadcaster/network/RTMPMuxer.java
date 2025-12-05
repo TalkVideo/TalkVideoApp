@@ -6,7 +6,7 @@ package io.antmedia.TalkVideoApp.broadcaster.network;
 public class RTMPMuxer {
 
     static {
-        System.loadLibrary("rtmp-jni");
+        // System.loadLibrary("rtmp-jni");
     }
 
     public native int open(String url, int video_width, int video_height);

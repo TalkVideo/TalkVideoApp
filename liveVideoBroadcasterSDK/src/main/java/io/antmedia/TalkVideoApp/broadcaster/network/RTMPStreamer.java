@@ -17,9 +17,9 @@ import java.util.Iterator;
  */
 public class RTMPStreamer extends Handler implements IMediaMuxer  {
 
-
     private static final boolean DEBUG = false;
     private static final String TAG = RTMPStreamer.class.getSimpleName();
+
     RTMPMuxer rtmpMuxer = new RTMPMuxer();
 
     public int frameCount;
@@ -79,6 +79,8 @@ public class RTMPStreamer extends Handler implements IMediaMuxer  {
         mLastReceivedAudioFrameTimeStamp = -1;
         lastSentFrameTimeStamp = -1;
         isConnected = false;
+
+        // System.loadLibrary("rtmp-jni");
         int result = rtmpMuxer.open(url, 0, 0);
 
         if (result > 0) {
