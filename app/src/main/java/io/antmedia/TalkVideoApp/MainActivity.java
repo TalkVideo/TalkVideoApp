@@ -19,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
     public static final String RTMP_BASE_URL = "rtmp://b.rtmp.youtube.com/live2/";
     public static final String SETTINGS_PREFS = "Settings";
 
+    static {
+        System.loadLibrary("rtmp-jni");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

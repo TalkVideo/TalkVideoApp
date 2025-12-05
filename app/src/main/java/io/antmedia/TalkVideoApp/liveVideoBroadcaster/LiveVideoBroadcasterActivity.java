@@ -88,6 +88,10 @@ public class LiveVideoBroadcasterActivity extends AppCompatActivity {
 
     private int sigval;
 
+    static {
+        System.loadLibrary("rtmp-jni");
+    }
+
 
     /** Defines callbacks for service binding, passed to bindService() */
     private ServiceConnection mConnection = new ServiceConnection() {
