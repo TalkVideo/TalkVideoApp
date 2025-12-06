@@ -90,7 +90,7 @@ Java_io_antmedia_TalkVideoApp_broadcaster_network_RtmpClient_nativeRead(JNIEnv* 
     int readCount = RTMP_Read(rtmp, data, size);
 
     if (readCount > 0) {
-        (*env)->SetByteArrayRegion(env, data_, offset, readCount, data);  // copy
+        (*env)->SetByteArrayRegion(env, data_, offset, readCount, (const jbyte *) data);  // copy
     }
     free(data);
     return readCount;
@@ -118,7 +118,7 @@ Java_io_antmedia_TalkVideoApp_broadcaster_network_RtmpClient_nativeWrite(JNIEnv*
 
     jbyte* buf = malloc(size);
     (*env)->GetByteArrayRegion(env, data, offset, size, buf);
-    int result = RTMP_Write(rtmp, buf, size);
+    int result = RTMP_Write(rtmp, (const char*) buf, size);
     free(buf);
     return result;
 }

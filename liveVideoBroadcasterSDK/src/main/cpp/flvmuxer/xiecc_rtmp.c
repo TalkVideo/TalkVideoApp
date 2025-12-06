@@ -223,6 +223,7 @@ int rtmp_close() {
         RTMP_Free(rtmp);
         rtmp = NULL;
     }
+    return 0;
 }
 
 int rtmp_is_connected()
@@ -237,7 +238,7 @@ int rtmp_is_connected()
 
 int rtmp_read_date(uint8_t* data, int size) {
     if (rtmp) {
-        RTMP_Read(rtmp, data, size);
+        RTMP_Read(rtmp, (char*) data, size);
     }
     return 0;
 }

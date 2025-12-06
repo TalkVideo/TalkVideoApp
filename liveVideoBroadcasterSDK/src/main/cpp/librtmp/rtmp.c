@@ -750,7 +750,7 @@ int RTMP_SetOpt(RTMP *r, const AVal *opt, AVal *arg)
   return RTMP_SUCCESS;
 }
 
-RTMPResult RTMP_SetupURL(RTMP *r, char *url)
+RTMPResult RTMP_SetupURL(RTMP *r, const char *url)
 {
   AVal opt, arg;
   char *p1, *p2, *ptr = strchr(url, ' ');
@@ -818,7 +818,7 @@ RTMPResult RTMP_SetupURL(RTMP *r, char *url)
 
   if (!r->Link.tcUrl.av_len)
     {
-      r->Link.tcUrl.av_val = url;
+      r->Link.tcUrl.av_val = (char*) url;
       if (r->Link.app.av_len)
         {
           if (r->Link.app.av_val < url + len)

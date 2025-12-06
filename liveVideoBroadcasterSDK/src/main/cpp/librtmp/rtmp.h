@@ -326,7 +326,7 @@ extern "C"
   void RTMP_UpdateBufferMS(RTMP *r);
 
   int RTMP_SetOpt(RTMP *r, const AVal *opt, AVal *arg);
-  RTMPResult RTMP_SetupURL(RTMP *r, char *url);
+  RTMPResult RTMP_SetupURL(RTMP *r, const char *url);
   void RTMP_SetupStream(RTMP *r, int protocol,
 			AVal *hostname,
 			unsigned int port,

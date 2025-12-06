@@ -5,9 +5,9 @@ android {
     defaultConfig {
         applicationId "test0000.TalkVideoApp"
         minSdkVersion 28
-        // targetSdkVersion 28
-        versionCode 2
-        versionName "2.0"
+        targetSdkVersion 36
+        versionCode 3
+        versionName "3.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

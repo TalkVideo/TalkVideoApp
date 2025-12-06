@@ -24,7 +24,7 @@ Java_io_antmedia_TalkVideoApp_broadcaster_network_RTMPMuxer_writeAudio(JNIEnv* e
                                                        jint offset, jint length, jlong timestamp) {
     jbyte *data = (*env)->GetByteArrayElements(env, data_, NULL);
 
-    jint result = rtmp_sender_write_audio_frame(&data[offset], length, timestamp, 0);
+    jint result = rtmp_sender_write_audio_frame((uint8_t*) &data[offset], length, timestamp, 0);
 
     (*env)->ReleaseByteArrayElements(env, data_, data, JNI_ABORT);
     return result;
@@ -35,7 +35,7 @@ Java_io_antmedia_TalkVideoApp_broadcaster_network_RTMPMuxer_writeVideo(JNIEnv* e
                                                        jint offset, jint length, jlong timestamp) {
     jbyte *data = (*env)->GetByteArrayElements(env, data_, NULL);
 
-    jint result = rtmp_sender_write_video_frame(&data[offset], length, timestamp, 0, 0);
+    jint result = rtmp_sender_write_video_frame((uint8_t*) &data[offset], length, timestamp, 0, 0);
 
     (*env)->ReleaseByteArrayElements(env, data_, data, JNI_ABORT);
 
@@ -61,10 +61,10 @@ Java_io_antmedia_TalkVideoApp_broadcaster_network_RTMPMuxer_read(JNIEnv* env, jo
 
     char* data = malloc(size);
 
-    int readCount = rtmp_read_date(data, size);
+    int readCount = rtmp_read_date((uint8_t *) data, size);
 
     if (readCount > 0) {
-        (*env)->SetByteArrayRegion(env, data_, offset, readCount, data);  // copy
+        (*env)->SetByteArrayRegion(env, data_, offset, readCount, (const jbyte *) data);  // copy
     }
     free(data);
 

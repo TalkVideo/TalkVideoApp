@@ -53,6 +53,7 @@ typedef unsigned char uint8_t;
 #define __LITTLE_ENDIAN	LITTLE_ENDIAN
 #endif
 
+#define __FLOAT_WORD_ORDER __BYTE_ORDER
 #endif /* !_WIN32 */
 
 /* define default endianness */

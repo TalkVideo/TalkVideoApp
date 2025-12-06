@@ -29,7 +29,7 @@
 
     <!--YouTube-->
     <string name="stream_url_value">rtmp://a.rtmp.youtube.com/live2</string>
-    <string name="streamId">Your-Stream-Key-Here</string>
+    <string name="streamId">YourKeyHere</string>
 
     <!--Nginx Or Oher RTMP Server Running On Network Host
     <string name="stream_url_value">rtmp://[HostName|IP]/[app]</string>
